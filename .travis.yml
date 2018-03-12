@@ -5,3 +5,7 @@ install:
   - npm install
 script:
 - npm test
+notifications:
+  email:
+    on_success: never
+    on_failure: always
