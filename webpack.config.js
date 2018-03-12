@@ -9,29 +9,26 @@ const moduleObj = (acc, curr, index) => ({ ...acc, [curr]: `commonjs ${curr}` })
 let nodeModules = fs.readdirSync('node_modules').filter(binaries).reduce(moduleObj, {});
 
 module.exports = {
-	entry: './main.js',
+	entry: './source.js',
 
-	output: {
-		filename: 'index.js',
-		path: path.resolve(__dirname, 'dist')
-	},
+	externals: nodeModules,
 
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
-				options: {
-					presets: ['env']
-				}
+				use: { loader: 'babel-loader' }
 			}
 		]
 	},
 
+	output: {
+		filename: 'compiled.js',
+		path: path.resolve(__dirname, 'dist')
+	},
+
+	plugins: [new UglifyJSPlugin()],
+
 	target: 'node',
-
-	externals: nodeModules,
-
-	plugins: [new UglifyJSPlugin()]
 };

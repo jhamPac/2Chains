@@ -1,12 +1,12 @@
-FROM node:latest
+FROM node:9-alpine
 
-WORKDIR /blockgang
+WORKDIR /
 
 COPY package.json .
 
 COPY package-lock.json .
 
-COPY ./dist/index.js .
+COPY ./dist/compiled.js .
 
 RUN npm install --quiet
 
