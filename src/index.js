@@ -22,8 +22,6 @@ const getGenesisBlock = () => {
 
 let blockchain = [getGenesisBlock()];
 
-console.log(blockchain)
-
 const initHttpServer = () => {
     let app = express();
     app.use(bodyParser.json());
