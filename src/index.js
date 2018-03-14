@@ -1,8 +1,8 @@
-import CryptoJS   from 'crypto-js';
-import express    from 'express';
-import bodyParser from 'body-parser';
-import WebSocket  from 'ws';
-import Block      from './Block';
+import CryptoJS         from 'crypto-js';
+import express          from 'express';
+import bodyParser       from 'body-parser';
+import WebSocket        from 'ws';
+import { createBlock }  from './lib';
 
 let http_port = process.env.HTTP_PORT || 3001;
 let p2p_port = process.env.P2P_PORT || 6001;
@@ -17,10 +17,12 @@ let MessageType = {
 };
 
 const getGenesisBlock = () => {
-    return new Block(0, '0', Date.now(), 'genesis block', CryptoJS.SHA256('3V3'));
+    return createBlock(0, '0', Date.now(), 'genesis block', CryptoJS.SHA256('3V3'));
 };
 
 let blockchain = [getGenesisBlock()];
+
+console.log(blockchain)
 
 const initHttpServer = () => {
     let app = express();
@@ -92,7 +94,7 @@ const generateNextBlock = (blockData) => {
     let nextIndex = previousBlock.index + 1;
     let nextTimestamp = new Date().getTime() / 1000;
     let nextHash = calculateHash(nextIndex, previousBlock.hash, nextTimestamp, blockData);
-    return new Block(nextIndex, previousBlock.hash, nextTimestamp, blockData, nextHash);
+    return createBlock(nextIndex, previousBlock.hash, nextTimestamp, blockData, nextHash);
 };
 
 
