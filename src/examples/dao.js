@@ -5,7 +5,7 @@ var msg;
 function sendMoney(user, amount) {
   document.write("sending money to: "+ user+ "." + " Amount: "+amount+"<br/>");
   contractBalance -= amount;
-FALLBACK()
+  FALLBACK();
 }
 
 //contract Bank
@@ -36,7 +36,7 @@ function withdrawBalance() {
 }
 
 //Contract BankAttacker
-var is_attack=true;
+var is_attack = true;
 
 function FALLBACK() {
  if (is_attack == true) {
@@ -47,9 +47,10 @@ function FALLBACK() {
 
 //Execution simulation
 document.write("Contract Balance: "+contractBalance+"<br/>");
+
 msg = {
-  "sender":"david",
-  "value":75
+  "sender": "david",
+  "value": 75
 }
 
 addToBalance();
@@ -57,7 +58,7 @@ addToBalance();
 document.write("Your balance in contract Bank is " + getUserBalance("david")+"<br/>");
 
 msg = {
- "sender":"david"
+ "sender": "david"
 }
 
 withdrawBalance();
