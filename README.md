@@ -1,4 +1,4 @@
-# Naivechain - a blockchain implementation in 200 lines of code
+# 2Chain.js - ⛓ a blockchain implementation using JavaScript
 
 ### Motivation
 Originally forked from [Naivechain](https://github.com/lhartikk/naivechain)
