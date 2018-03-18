@@ -1,7 +1,8 @@
 # Naivechain - a blockchain implementation in 200 lines of code
 
 ### Motivation
-Originally forked from [here](https://github.com/lhartikk/naivechain)
+Originally forked from [Naivechain](https://github.com/lhartikk/naivechain)
+
 All the current implementations of blockchains are tightly coupled with the larger context and problems they (e.g. Bitcoin or Ethereum) are trying to solve. This makes understanding blockchains a necessarily harder task, than it must be. Especially source-code-wisely. This project is an attempt to provide as concise and simple implementation of a blockchain as possible.
 
 
