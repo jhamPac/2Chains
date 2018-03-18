@@ -1,14 +1,15 @@
 {
-  "name": "naivechain",
-  "version": "1.3.0",
-  "description": "blockchain implementation in 200 lines 💻",
+  "author": "jhamPac <cloud@kevia.me>",
+  "name": "2Chains",
+  "version": "2.0.0",
+  "description": "a blockchain implementation using JavaScript, Docker, Node and more... 💻",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=8.6.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jhamPac/naivechain.git"
+    "url": "git@github.com:jhamPac/2Chains.git"
   },
   "scripts": {
     "start": "node compiled.js",

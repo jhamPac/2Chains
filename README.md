@@ -1,8 +1,9 @@
-[![Build Status](https://travis-ci.org/jhamPac/block-gang.svg?branch=master)](https://travis-ci.org/jhamPac/block-gang)
-
-# Naivechain - a blockchain implementation in 200 lines of code
+# 2Chains.js - ⛓
 
 ### Motivation
+2 Chainz - BOATS II -
+"Woke up on the [BLOCK](https://en.wikipedia.org/wiki/Blockchain#Blocks), hit it with a [FORK](https://github.com/lhartikk/naivechain)"
+
 All the current implementations of blockchains are tightly coupled with the larger context and problems they (e.g. Bitcoin or Ethereum) are trying to solve. This makes understanding blockchains a necessarily harder task, than it must be. Especially source-code-wisely. This project is an attempt to provide as concise and simple implementation of a blockchain as possible.
 
 
