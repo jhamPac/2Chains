@@ -1,4 +1,4 @@
-# 2Chain.js - ⛓ a blockchain implementation using JavaScript
+# 2Chain.js - ⛓ 
 
 ### Motivation
 Originally forked from [Naivechain](https://github.com/lhartikk/naivechain)
