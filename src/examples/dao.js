@@ -18,7 +18,7 @@ function getBalance() {
 function addToBalance() {
 
   if (userBalances[msg.sender] == undefined) {
-   userBalances[msg.sender]=0;
+   userBalances[msg.sender] = 0;
   }
 
   userBalances[msg.sender] = userBalances[msg.sender] + msg.value;
@@ -31,7 +31,7 @@ function getUserBalance(x) {
 
 function withdrawBalance() {
    var amountToWithdraw = userBalances[msg.sender];
-   sendMoney(msg.sender,amountToWithdraw);
+   sendMoney(msg.sender, amountToWithdraw);
    userBalances[msg.sender] = 0;
 }
 
