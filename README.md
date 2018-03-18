@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jhamPac/2Chains.svg?branch=master)](https://travis-ci.org/jhamPac/2Chains)
+
 # 2Chains.js - ⛓
 
 ### Motivation
