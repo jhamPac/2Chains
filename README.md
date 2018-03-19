@@ -40,4 +40,4 @@ This project requires some knowledge of the following. Currently this project is
 * terminal
 
 ### Getting started
-Everything regarding set up and required knowledge can be found [here](https://github.com/jhamPac/2Chains/wiki) in the wiki 📖.
+Everything regarding set up and required knowledge can be found [here](https://github.com/jhamPac/2Chains/wiki/2Chains.js) in the wiki 📖.
