@@ -16,7 +16,7 @@ Concepts to come in future commits...
 ### What is blockchain technology
 Blockchain technology is a P2P distributed ledger of transactions that are secured using immutable math. It solves the problem of trust on the internet oddly enough without the need of trust, just math. The following are some good resources to understand blockchain.
 
-* [Wikipedia](https://en.wikipedia.org/wiki/Blockchain_(database)
+* [Wikipedia](https://en.wikipedia.org/wiki/Blockchain_(database))
 * [Visual Demo](https://www.youtube.com/watch?v=_160oMzblY8)
 * [Visual Demo Pt. 2](https://www.youtube.com/watch?v=xIDL_akeras)
 * [Comodo Series](https://www.comodo.com/resources/small-business/digital-certificates2.php)
