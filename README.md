@@ -6,60 +6,38 @@
 2 Chainz - BOATS II -
 "Woke up on the [BLOCK](https://en.wikipedia.org/wiki/Blockchain#Blocks), hit it with a [FORK](https://github.com/lhartikk/naivechain)"
 
-All the current implementations of blockchains are tightly coupled with the larger context and problems they (e.g. Bitcoin or Ethereum) are trying to solve. This makes understanding blockchains a necessarily harder task, than it must be. Especially source-code-wisely. This project is an attempt to provide as concise and simple implementation of a blockchain as possible.
+This project is to help you gain a better understanding of the technology driving the latest craze in cryptocurrencies. By implementing a very basic blockchain leveraging docker, node and plain old javascript I hope you will gain a better grasp of the blockchain technology and its many possibilities outside of just a form of money. By understanding blockchain, you will then begin to see what cryptocurrencies such as Bitcoin and Ethereum are trying to solve.
 
+Concepts to come in future commits...
+* smart contracts
+* decentralized autonomous organizations
+* Web 3.0 
 
-### What is blockchain
-[From Wikipedia](https://en.wikipedia.org/wiki/Blockchain_(database)) : Blockchain is a distributed database that maintains a continuously-growing list of records called blocks secured from tampering and revision.
+### What is blockchain technology
+Blockchain technology is a P2P distributed ledger of transactions that are secured using immutable math. It solves the problem of trust on the internet oddly enough without the need of trust, just math. The following are some good resources to understand blockchain.
 
-### Key concepts of Naivechain
-Check also [this blog post](https://medium.com/@lhartikk/a-blockchain-in-200-lines-of-code-963cc1cc0e54#.dttbm9afr5) for a more detailed overview of the key concepts
+* [Wikipedia](https://en.wikipedia.org/wiki/Blockchain_(database)
+* [Visual Demo](https://www.youtube.com/watch?v=_160oMzblY8)
+* [Visual Demo Pt. 2](https://www.youtube.com/watch?v=xIDL_akeras)
+* [Comodo Series](https://www.comodo.com/resources/small-business/digital-certificates2.php)
+
+### Key concepts of 2Chains.js
+From Naivechain: Check out this [blog post](https://medium.com/@lhartikk/a-blockchain-in-200-lines-of-code-963cc1cc0e54#.dttbm9afr5) for a more detailed overview of the original project. 2Chains.js builds on top of...
+
 * HTTP interface to control the node
 * Use Websockets to communicate with other nodes (P2P)
 * Super simple "protocols" in P2P communication
 * Data is not persisted in nodes
 * No proof-of-work or proof-of-stake: a block can be added to the blockchain without competition
 
+### Key skill/knowledge required to set the environment up
+This project requires some knowledge of the following. Currently this project is geared towards macOS users.
 
-![alt tag](naivechain_blockchain.png)
+* Docker
+* Node programming
+* Webpack 4
+* JavaScript
+* terminal
 
-![alt tag](naivechain_components.png)
-
-
-### Naivecoin
-For a more extensive tutorial about blockchains, you can check the project [Naivecoin](https://lhartikk.github.io/). It is based on Naivechain and implements for instance Proof-of-work, transactions and wallets.
-
-### Quick start
-(set up two connected nodes and mine 1 block)
-```
-npm install
-HTTP_PORT=3001 P2P_PORT=6001 npm start
-HTTP_PORT=3002 P2P_PORT=6002 PEERS=ws://localhost:6001 npm start
-curl -H "Content-type:application/json" --data '{"data" : "Some data to the first block"}' http://localhost:3001/mineBlock
-```
-
-### Quick start with Docker
-(set up three connected nodes and mine a block)
-###
-```sh
-docker-compose up
-curl -H "Content-type:application/json" --data '{"data" : "Some data to the first block"}' http://localhost:3001/mineBlock
-```
-
-### HTTP API
-##### Get blockchain
-```
-curl http://localhost:3001/blocks
-```
-##### Create block
-```
-curl -H "Content-type:application/json" --data '{"data" : "Some data to the first block"}' http://localhost:3001/mineBlock
-```
-##### Add peer
-```
-curl -H "Content-type:application/json" --data '{"peer" : "ws://localhost:6001"}' http://localhost:3001/addPeer
-```
-#### Query connected peers
-```
-curl http://localhost:3001/peers
-```
+### Getting started
+Everything regarding set up and required knowledge can be found [here](https://github.com/jhamPac/2Chains/wiki) in the wiki 📖.
